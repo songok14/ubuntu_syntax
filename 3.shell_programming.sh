@@ -1,4 +1,5 @@
 # 쉘스크립트 작성, 반드시 확장자 .sh
+# 실행권한(x)이 있어야 실행 가능
 touch myscript.sh
 nano myscript.sh
 echo "hello world"
@@ -47,7 +48,7 @@ filecount=0
 dircount=0
 for a in *
 do
-    if [ -f *.* ]; then
+    if [ -f $a ]; then
         let filecount=filecount+1
     else
         let dircount=dircount+1
